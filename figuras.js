@@ -15,15 +15,40 @@ const areaCirculo = radio => Math.PI * ((diametroCirculo(radio) / 2) ** 2);
 // Interactuando con HTML
 
 function calcularPerimetroCuadrado() {
-    const input = document.getElementById("inputLadoCuadrado");
-    const value = input.value;
-    const perimetro = perimetroCuadrado(value);
+    const lado = document.getElementById("inputLadoCuadrado").value;
+    const perimetro = perimetroCuadrado(lado);
     alert(perimetro);
 }
 
 function calcularAreaCuadrado() {
-    const input = document.getElementById("inputLadoCuadrado");
-    const value = input.value;
-    const area = areaCuadrado(value);
+    const lado = document.getElementById("inputLadoCuadrado").value;
+    const area = areaCuadrado(lado);
+    alert(area);
+}
+
+function calcularPerimetroTriangulo() {
+    const lado1 = parseInt(document.getElementById("inputLado1Triangulo").value);
+    const lado2 = parseInt(document.getElementById("inputLado2Triangulo").value);
+    const base = parseInt(document.getElementById("inputBaseTriangulo").value);
+    const perimetro = perimetroTriangulo(lado1, lado2, base);
+    alert(perimetro);
+}
+
+function calcularAreaTriangulo() {
+    const base = parseInt(document.getElementById("inputBaseTriangulo").value);
+    const altura = parseInt(document.getElementById("inputAlturaTriangulo").value);
+    const area = areaTriangulo(base, altura);
+    alert(area);
+}
+
+function calcularPerimetroCirculo() {
+    const radio = document.getElementById("inputRadioCirculo").value;
+    const perimetro = perimetroCirculo(radio);
+    alert(perimetro);
+}
+
+function calcularAreaCirculo() {
+    const radio = document.getElementById("inputRadioCirculo").value;
+    const area = areaCirculo(radio);
     alert(area);
 }
