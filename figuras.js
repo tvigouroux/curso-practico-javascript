@@ -1,42 +1,14 @@
 // Código del cuadrado
-console.group("Cuadrado");
+const perimetroCuadrado = lado => lado * 4;
 
-function perimetroCuadrado(lado) {
-    return lado * 4;
-}
+const areaCuadrado = lado => lado ** 2;
 
-function areaCuadrado(lado) {
-    return lado ** 2;
-} 
+const perimetroTriangulo = (lado1, lado2, base) => lado1 + lado2 + base;
 
-console.groupEnd();
+const areaTriangulo = (base, altura) => (base * altura) / 2;
 
-// Código del triángulo
-console.group("Triángulo");
+const diametroCirculo = radio => radio * 2;
 
-function perimetroTriangulo(lado1, lado2, base) {
-    return lado1 + lado2 + base;
-} 
+const perimetroCirculo = radio => diametroCirculo(radio) * Math.PI;
 
-function areaTriangulo(base, altura) {
-    return (base * altura) / 2;
-}
-
-console.groupEnd();
-
-// Código del círculo
-console.group("Círculo");
-
-function diametroCirculo(radio) {
-    return radio * 2;
-}
-
-function perimetroCirculo(radio) {
-    return diametroCirculo(radio) * Math.PI;
-}
-
-function areaCirculo(radio) {
-    return Math.PI * ((diametroCirculo(radio) / 2) ** 2);
-}
-
-console.groupEnd();
+const areaCirculo = radio => Math.PI * ((diametroCirculo(radio) / 2) ** 2);
