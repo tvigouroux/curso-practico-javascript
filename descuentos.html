@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discount Calculator (Platzi's JS Training)</title>
 </head>
-<body>
+<body onload="fillSelect(discountCoupons)">
     <header>
         <h1>
             Percentages and discounts
@@ -17,8 +17,10 @@
         <form action="">
             <label for="InputPrice">Original price</label>
             <input type="number" min="0" placeholder="price before discount" id="InputPrice">
-            <label for="InputDiscount">Discount</label>
-            <input type="number" min="0" max="100" placeholder="0 to 100" id="InputDiscount">
+            <label for="InputDiscount">Select discount coupon</label>
+            <select id="InputDiscount">
+
+            </select>
             <button type="button" onClick="calculateDiscount()">Calculate discounted price</button>
             <p id="resultP"></p>
         </form>
